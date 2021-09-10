@@ -141,4 +141,14 @@ end
 
 #Will ouput "These hashses are the same!" as the two hashes contain the same key/value pairs using old/new syntax
 
-#16. 
+#16. Programmatically loop or iterate over the contacts hash from exercise 11, and populate the associated data from the contact_data array. 
+
+contact_data = ["joe@email.com", "123 Main st.", "555-123-4567"]
+contacts = {"Joe Smith" => {}}
+fields = [:email, :address, :phone]
+
+contacts.each do |name, hash|
+  fields.each do |field|
+    hash[field] = contact_data.shift
+  end 
+end 
